@@ -6,7 +6,27 @@
 </head>
 <body>
 	<section id="simple-carousel">
-		Test
+		<span class="prev direction-btn" onclick="swap()">
+			<img src="public/img/left.png">
+		</span>
+		<ul class="carousel">
+			<li class="slide main-slide" slide-id=1>
+				<img src="public/img/bunny.jpg" />
+			</li>
+			<li class="slide right-slide" slide-id=2>
+				<img src="public/img/house.jpg" />
+			</li>
+			<li class="slide back-slide" slide-id=3>
+				<img src="public/img/puppy.jpg"/>
+			</li>
+			<li class="slide left-slide" slide-id=4>
+				<img src="public/img/nature.jpg"/>
+			</li>
+		</ul>
+		<span class="next direction-btn" onclick="swap(1)">
+			<img src="public/img/right.png">
+		</span>
+		<ul id="carousel-bullets"></ul>
 	</section>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="public/carousel.js"></script>

@@ -1,3 +1,49 @@
 $( document ).ready(function() {
-  console.log('jQuery working')
+  // building image bullets
+  var slideID=1;
+  for (var i=0; i<itemCount; i++){
+    if (slideID===1) {
+      $("#carousel-bullets").append('<li class="carousel-bullet bullet-hilight" id="slide'+slideID+'">&#9679;</li>');
+    } else {
+      $("#carousel-bullets").append('<li class="carousel-bullet" id="slide'+slideID+'">&#9702;</li>');
+    }
+    slideID++;
+  }
 });
+
+// Finding number of slides in slider and setting slide number of right-slide
+var itemCount = $('.carousel li.slide').length;
+
+  //changing images
+function swap (action) {
+  //previous slide
+  if(!(action)) {
+    var leftSlide = $('.left-slide').attr('slide-id') - 1;
+    leftSlide=(leftSlide<1)?leftSlide = itemCount:leftSlide;
+
+    $('.right-slide').removeClass('right-slide').addClass('back-slide');
+    $('.main-slide').removeClass('main-slide').addClass('right-slide');
+    $('.left-slide').removeClass('left-slide').addClass('main-slide');
+    $('.back-slide[slide-id=' + leftSlide + ']').removeClass('back-slide').addClass('left-slide');
+  }
+  
+  //next slide
+  if(action) {
+    var rightSlide = Number($('.right-slide').attr('slide-id'))+1;
+    rightSlide=(rightSlide>itemCount)?rightSlide=1:rightSlide;
+
+    $('.left-slide').removeClass('left-slide').addClass('back-slide');
+    $('.main-slide').removeClass('main-slide').addClass('left-slide');
+    $('.right-slide').removeClass('right-slide').addClass('main-slide');
+    $('.back-slide[slide-id=' + rightSlide + ']').removeClass('back-slide').addClass('right-slide');
+  }
+
+  //updating image bullets
+  var slideNum = $('.main-slide').attr('slide-id');
+  $('.bullet-hilight')[0].innerHTML="&#9702;";
+  $('.bullet-hilight').removeClass('bullet-hilight');
+  $('#slide'+slideNum).addClass('bullet-hilight');
+  $('#slide'+slideNum)[0].innerHTML="&#9679;";
+}
+
+
