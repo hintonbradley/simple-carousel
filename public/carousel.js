@@ -1,17 +1,17 @@
 $( document ).ready(function() {
   // building image bullets
-  var slideID=1;
+  var bulletID=1;
   for (var i=0; i<itemCount; i++){
-    if (slideID===1) {
-      $("#carousel-bullets").append('<li class="carousel-bullet bullet-hilight" id="slide'+slideID+'">&#9679;</li>');
+    if (bulletID===1) {
+      $("#carousel-bullets").append('<li class="carousel-bullet bullet-hilight" id="bullet'+bulletID+'">&#9679;</li>');
     } else {
-      $("#carousel-bullets").append('<li class="carousel-bullet" id="slide'+slideID+'">&#9702;</li>');
+      $("#carousel-bullets").append('<li class="carousel-bullet" id="bullet'+bulletID+'">&#9702;</li>');
     }
-    slideID++;
+    bulletID++;
   }
 });
 
-// Finding number of slides in slider and setting slide number of right-slide
+// Finding number of slides in slider
 var itemCount = $('.carousel li.slide').length;
 
   //changing images
@@ -42,8 +42,8 @@ function swap (action) {
   var slideNum = $('.main-slide').attr('slide-id');
   $('.bullet-hilight')[0].innerHTML="&#9702;";
   $('.bullet-hilight').removeClass('bullet-hilight');
-  $('#slide'+slideNum).addClass('bullet-hilight');
-  $('#slide'+slideNum)[0].innerHTML="&#9679;";
+  $('#bullet'+slideNum).addClass('bullet-hilight');
+  $('#bullet'+slideNum)[0].innerHTML="&#9679;";
 }
 
 
