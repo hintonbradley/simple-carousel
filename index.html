@@ -2,11 +2,13 @@
 <html>
 <head>
 	<title>Simple Carousel</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="public/carousel.js"></script>
 	<link rel="stylesheet" type="text/css" href="public/carousel.css">
 </head>
 <body>
 	<section id="simple-carousel">
-		<span class="prev direction-btn" onclick="swap()">
+		<span id="prev-slide" class="prev direction-btn">
 			<img src="public/img/left.png">
 		</span>
 		<ul class="carousel">
@@ -23,12 +25,10 @@
 				<img src="public/img/nature.jpg"/>
 			</li>
 		</ul>
-		<span class="next direction-btn" onclick="swap(1)">
+		<span id="next-slide" class="next direction-btn">
 			<img src="public/img/right.png">
 		</span>
 		<ul id="carousel-bullets"></ul>
 	</section>
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="public/carousel.js"></script>
 </body>
 </html>
