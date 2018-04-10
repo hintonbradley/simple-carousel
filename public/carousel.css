@@ -1,28 +1,28 @@
 /*Slider*/
-#simple-carousel ul.carousel {
+.simple-carousel ul.carousel {
 	/*centering carousel*/
 	position: relative;
 	margin: auto;
 	text-align: center;
 }
 
-#simple-carousel ul.carousel li {
+.simple-carousel ul.carousel li {
 	/*centering slides*/
 	position: absolute;
 	left: 0;
 	right: 0;
 }
 
-#simple-carousel ul.carousel li img {
+.simple-carousel ul.carousel li img {
 	/*resizing images so left and right slides can be displayed behind main*/
 	width: 60%;
 }
 
-#simple-carousel .main-slide {
+.simple-carousel .main-slide {
 	z-index: 20;
 }
 
-#simple-carousel ul.carousel li.left-slide {
+.simple-carousel ul.carousel li.left-slide {
   opacity: .3;
   z-index: 10;
   /*reducing size and moving to left*/
@@ -31,7 +31,7 @@
   transform: scale(.75) translate(-15vw,0px);
 }
 
-#simple-carousel ul.carousel li.right-slide {
+.simple-carousel ul.carousel li.right-slide {
 	opacity: .3;
 	z-index: 10;
 	/*reducing size and moving to right*/
@@ -40,13 +40,13 @@
 	transform: scale(.75) translate(15vw,0px);
 }
 
-#simple-carousel ul.carousel li.back-slide {
+.simple-carousel ul.carousel li.back-slide {
 	visibility: hidden;
 }
 /*End Slider*/
 
 /*Direction Buttons*/
-#simple-carousel .direction-btn {
+.simple-carousel .direction-btn {
 	position: relative;
 	z-index: 30;
 	display: inline-block;
@@ -54,28 +54,28 @@
 	width: 8%;
 }
 
-#simple-carousel .direction-btn img {
+.simple-carousel .direction-btn img {
 	width: 100%;
     height: auto;
 }
 
-#simple-carousel .direction-btn.prev {
+.simple-carousel .direction-btn.prev {
     float: left;
     margin-left: 5vw;
 }
 
-#simple-carousel .direction-btn.next {
+.simple-carousel .direction-btn.next {
 	float: right;
 	margin-right: 5vw;
 }
 /*End Direction Buttons*/
 
 /*Bullets*/
-#simple-carousel #carousel-bullets li {
+.simple-carousel .img-blts li {
 	display: inline-block;
 }
 
-#simple-carousel ul#carousel-bullets {
+.simple-carousel ul.img-blts {
 	padding: 0px;
 	position: absolute;
     margin-top: 45vw;

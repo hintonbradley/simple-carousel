@@ -36,7 +36,6 @@ $( document ).ready(() => {
 		}
 	}
 
-	// Initializing our event listeners
 	Carousel.prototype.init = function() {
 		var _this = this;
 
@@ -55,10 +54,7 @@ $( document ).ready(() => {
 		$('#next-slide').click(function() {_this.swap('next')});
 	};
 
-	// Creating an instance of the form
 	var simpleCarousel = new Carousel();
-
-	// Calling init() to initialize click events on the new form
 	simpleCarousel.init();
 });
 
